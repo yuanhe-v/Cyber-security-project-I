@@ -23,8 +23,8 @@ def deleteView(request):
 
     #Fix flaw: broken access control
     #course = Course.objects.get(course= request.POST.get('course'))
-	#if request.user == course.student:
-	#	course.delete()
+    #if request.user == course.student:
+    #	course.delete()
 
     
     return redirect('/')
