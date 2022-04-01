@@ -1,0 +1,19 @@
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+        <!--<div class="element-username" >
+          <label class="title">Username<span class="required">*</span></label>
+          <input type="username" name="username" value="" required="required" pattern="^[a-zA-Z''-'\s]{1,40}$"/>
+        </div>
+
+        <div class="element-password" >
+          <label class="title">Password<span class="required">*</span></label>
+          <input type="password" name="password" value="" required="required", pattern="(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,10})$"/>
+        </div>-->
+
+
+        <div class="element-username" ><label class="title">Username</label><input type="username" name="username" value="" /></div>
+        <div class="element-password" ><label class="title">Password</label><input type="password" name="password" value="" /></div>
+
+        <button type="submit">Login</button>
+</form>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Course Register System</title>
+    </head>
+
+
+    <body>
+		<h1>ABC university course system</h1>
+
+        <table>
+		<tr>
+		<th style="text-align:left">Username: <td>{{user.username}}
+		</table>
+
+
+        <form action='logout/' method="POST">
+			{% csrf_token %}
+            <input type="submit" value="Logout"/>
+        </form>
+
+        <h2>Your registered courses</h2>
+
+		<ul>
+		{% for student, course, ssn in courses.items %}
+
+		<li>course</li>
+
+		{% endfor %}
+		</ul>
+
+
+        <h2>Register a new course</h2>
+
+        <form action='add/' method="POST">
+            <!--{% csrf_token %}-->
+			<h3>Course name</h3>
+      <input type="text" name="course"/><br/>
+      <h3>Your social security number</h3>
+      <input type="text" name="ssn"/><br/>
+            <input type="submit" value="Send"/>
+        </form>
+
+
+        <h2>Delete a course</h2>
+        <form action='delete/' method="POST">
+			       <!--{% csrf_token %}-->
+
+            <input type="text" name="course"/><br/>
+            <input type="submit" value="Delete"/>
+        </form>
+    </body>
+
+
+    </body>
+</html>
