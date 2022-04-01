@@ -22,9 +22,9 @@
         <h2>Your registered courses</h2>
 
 		<ul>
-		{% for student, course, ssn in courses.items %}
+		{% for c in courses %}
 
-		<li>course</li>
+		<li>{{c.course}}</li>
 
 		{% endfor %}
 		</ul>
